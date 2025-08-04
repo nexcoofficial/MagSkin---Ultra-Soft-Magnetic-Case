@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagSkin™ - Ultra Soft Magnetic Case | Premium Silicone Case untuk iPhone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#000000',
+                        'secondary': '#4a4a4a',
+                        'accent': '#c0c0c0',
+                        'light-gray': '#9a9a9a',
+                        'star': '#ffd700',
+                    },
+                    fontFamily: {
+                        'heading': ['Lato', 'sans-serif'],
+                        'body': ['Source Sans Pro', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #4a4a4a;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lato', sans-serif;
+            color: #000000;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/de984d37fffd4acf81811d2602412d0d~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button i {
+            margin-right: 10px;
+        }
+        
+        .discount-badge {
+            background-color: #ff3b30;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            z-index: 10;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0f0f0 0%, #c0c0c0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 28px;
+            color: #000000;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-media {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-media:hover {
+            transform: scale(1.05);
+        }
+        
+        .social-proof {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 14px;
+            z-index: 1000;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+        }
+        
+        .social-proof.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .countdown-item {
+            background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+            color: white;
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 0 10px;
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 36px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .lightbox-close:hover {
+            transform: rotate(90deg);
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 100;
+        }
+        
+        .sticky-cta.active {
+            transform: translateY(0);
+        }
+        
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .phone-model {
+            background: white;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 12px 10px;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .phone-model:hover {
+            background: #f9f9f9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .color-option.active {
+            border: 2px solid #000000;
+            transform: scale(1.1);
+        }
+        
+        .color-option.brown { background-color: #A52A2A; }
+        .color-option.lightblue { background-color: #ADD8E6; }
+        .color-option.purple { background-color: #9370DB; }
+        .color-option.pinksand { background-color: #FADADD; }
+        .color-option.black { background-color: #000000; }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 90vh;
+            }
+            
+            .countdown-item {
+                width: 50px;
+                height: 50px;
+                font-size: 14px;
+            }
+            
+            .phone-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+            
+            .social-proof {
+                width: 280px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl glass-card p-8 md:p-12 rounded-2xl">
+                <div class="flex items-center mb-4">
+                    <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/9968f80a9fe9483bb00878e608e697f9~tplv-o3syd03w52-resize-png:300:300.png?dr=15580" alt="Logo Toko" class="w-12 h-12 rounded-full mr-3">
+                    <h1 class="text-2xl md:text-3xl font-bold">MagSkin™ Official Store</h1>
+                    <span class="ml-2 text-blue-500"><i class="fas fa-check-circle"></i></span>
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-bold mb-2">MagSkin™</h1>
+                <p class="text-lg md:text-xl mb-6 text-white">Ultra Soft Magnetic Case</p>
+                
+                <div class="flex items-center mb-6">
+                    <div class="text-3xl font-bold text-white">Rp195k</div>
+                    <div class="ml-3 text-lg line-through text-gray-400">Rp289k</div>
+                    <div class="ml-3 text-sm bg-red-500 text-white px-2 py-1 rounded">-33%</div>
+                </div>
+                
+                <div class="flex items-center space-x-6 mb-8 text-sm">
+                    <div class="flex items-center">
+                        <div class="flex mr-2">
+                            <i class="fas fa-star text-star"></i>
+                            <i class="fas fa-star text-star"></i>
+                            <i class="fas fa-star text-star"></i>
+                            <i class="fas fa-star text-star"></i>
+                            <i class="fas fa-star text-star"></i>
+                        </div>
+                        <span>4.9 (1.2k)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-1"></i>
+                        <span>1.5k+ sold</span>
+                    </div>
+                </div>
+                
+                <button class="w-full py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                    BUY NOW
+                </button>
+                
+                <div class="mt-6 flex justify-center space-x-4 text-xs text-gray-300">
+                    <span>1 Year Warranty</span>
+                    <span>•</span>
+                    <span>Free Shipping</span>
+                    <span>•</span>
+                    <span>14 Day Returns</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Fitur Unggulan MagSkin™</h2>
+                <p class="text-gray-600">Perlindungan premium dengan desain minimalis</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-4">
+                    <i class="fas fa-layer-group text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Silicone Premium</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-bolt text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Wireless Charging</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-camera text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Raised Camera</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-shield-alt text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Dustproof</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-mobile-alt text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Display Protection</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-feather text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Soft Buttons</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-fan text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Anti Panas</h3>
+                </div>
+                
+                <div class="text-center p-4">
+                    <i class="fas fa-magnet text-2xl mb-3 text-gray-800"></i>
+                    <h3 class="font-medium">Magsafe</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Penampakan Produk</h2>
+                <p class="text-xl max-w-3xl mx-auto">Lihat bagaimana MagSkin™ melindungi iPhone Anda dengan gaya premium</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/de984d37fffd4acf81811d2602412d0d~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/70b1e9bbf8e848f2a5b557c39d191db8~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/836ef799fd0940cfa5ecde24f0a00b5f~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/6c01b68b9ede4f3bbab1eabffce175a4~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/afebc1a4f3204e6e81b47b87f954a963~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/23251c27a9fb458d95cb938bdd4108e3~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+
+                <div class="product-card">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/35aa0a224cce4dcfbfdbe53d1c2bbf3d~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full h-auto rounded-lg">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Kompatibel dengan iPhone Anda</h2>
+                <p class="text-xl max-w-3xl mx-auto">Tersedia untuk berbagai model iPhone</p>
+            </div>
+            
+            <div class="phone-grid">
+                <div class="phone-model">iPhone 11</div>
+                <div class="phone-model">iPhone 11 Pro</div>
+                <div class="phone-model">iPhone 11 Pro Max</div>
+                <div class="phone-model">iPhone 12/12 Pro</div>
+                <div class="phone-model">iPhone 12 Pro Max</div>
+                <div class="phone-model">iPhone 13/14</div>
+                <div class="phone-model">iPhone 13 Pro</div>
+                <div class="phone-model">iPhone 13 Pro Max</div>
+                <div class="phone-model">iPhone 14 Plus</div>
+                <div class="phone-model">iPhone 14 Pro</div>
+                <div class="phone-model">iPhone 14 Pro Max</div>
+                <div class="phone-model">iPhone 15</div>
+                <div class="phone-model">iPhone 15 Plus</div>
+                <div class="phone-model">iPhone 15 Pro</div>
+                <div class="phone-model">iPhone 15 Pro Max</div>
+                <div class="phone-model">iPhone 16</div>
+                <div class="phone-model">iPhone 16 Plus</div>
+                <div class="phone-model">iPhone 16 Pro</div>
+                <div class="phone-model">iPhone 16 Pro Max</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Apa Kata Pelanggan Kami?</h2>
+                <p class="text-xl max-w-3xl mx-auto">4.9/5.0 dari 1.257+ ulasan pelanggan</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://i.pinimg.com/1200x/f0/aa/f3/f0aaf3e8e05c81caf4ab4ca86e65823e.jpg" alt="Lestari F" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold">Lestari F</h3>
+                                <div class="flex mt-1">
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">"<span class="font-bold">Tekstur: empuk</span> <span class="font-bold">Warna: soft</span> <span class="font-bold">Fungsi: melindungi hp</span> Agak licin ya wakkkkk case nya"</p>
+                        <div class="flex justify-center">
+                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasa-m5y6mddw8t5k7d.webp" alt="Testimonial Media" class="testimonial-media" data-src="https://down-id.img.susercontent.com/file/id-11134103-7rasa-m5y6mddw8t5k7d.webp">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://i.pinimg.com/736x/a7/65/61/a76561b3d89e25666196423cbaf21748.jpg" alt="Vina M" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold">Vina M</h3>
+                                <div class="flex mt-1">
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">"<span class="font-bold">Desain: ada magsafe</span> warnanya cakep dan pas di hp, ada magsafenya dan itu berfungsi &lt;3"</p>
+                        <div class="flex justify-center">
+                            <video class="testimonial-media" controls data-src="https://down-bs-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6knaw-m574yx0kdv5y23.default.mp4">
+                                <source src="https://down-bs-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6knaw-m574yx0kdv5y23.default.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <img src="https://i.pinimg.com/736x/2a/4f/a5/2a4fa5db1928b80870df4411219b108c.jpg" alt="Winda A" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold">Winda A</h3>
+                                <div class="flex mt-1">
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                    <i class="fas fa-star text-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4">"<span class="font-bold">Warna: lembut dan sesuai gambar</span> <span class="font-bold">Desain: lucu dan menarik</span> <span class="font-bold">Tekstur: sangat lembut dan nyaman</span> Bikin hp jadi makin cantik suka banget 🩷✨"</p>
+                        <div class="flex justify-center">
+                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbkb-m9ijal3e4wzf68.webp" alt="Testimonial Media" class="testimonial-media" data-src="https://down-id.img.susercontent.com/file/id-11134103-7rbkb-m9ijal3e4wzf68.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pesan Sekarang!</h2>
+                <p class="text-xl max-w-3xl mx-auto">Dapatkan diskon spesial 33% untuk pembelian hari ini</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto glass-card p-8 rounded-2xl">
+                <div class="flex flex-col md:flex-row md:items-center mb-10">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <div class="relative inline-block">
+                            <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/de984d37fffd4acf81811d2602412d0d~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-full max-w-xs mx-auto rounded-xl">
+                            <div class="discount-badge">DISKON 33%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="mb-6">
+                            <div class="flex items-center mb-2 group">
+                                <div class="relative">
+                                    <div class="text-4xl font-bold text-white transition-all duration-300 group-hover:text-red-400 group-hover:scale-105">
+                                        Rp 195.000
+                                    </div>
+                                    <div class="absolute -bottom-1 left-0 h-1 bg-gradient-to-r from-red-500 to-yellow-400 w-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                                </div>
+                                <div class="ml-4 text-xl line-through text-gray-300 relative">
+                                    Rp 289.000
+                                    <div class="absolute top-1/2 left-0 w-full h-0.5 bg-red-500 transform -translate-y-1/2"></div>
+                                </div>
+                                <div class="ml-3 px-3 py-1 bg-red-600 text-xs font-bold text-white rounded-full animate-pulse">
+                                    Hemat 33%
+                                </div>
+                            </div>
+                            <p class="text-gray-300">Harga khusus untuk 50 pembeli berikutnya!</p>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-3">Stok Tersisa: <span class="text-red-400">42</span> buah</h3>
+                            <div class="w-full bg-gray-700 rounded-full h-4 mb-4">
+                                <div class="bg-red-500 h-4 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-4">Pilih Warna:</h3>
+                            <div class="flex flex-wrap gap-4 justify-center">
+                                <div class="text-center">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ra2a-m52fa3nwsql3b0@resize_w450_nl.webp" alt="Brown" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-transparent hover:border-white transition-all cursor-pointer">
+                                    <span class="text-sm">Brown</span>
+                                </div>
+                                <div class="text-center">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ra3f-m52fa3nctl9a40@resize_w450_nl.webp" alt="Light Blue" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-transparent hover:border-white transition-all cursor-pointer">
+                                    <span class="text-sm">Light Blue</span>
+                                </div>
+                                <div class="text-center">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ra0m-m52fa3v4nssgdd@resize_w450_nl.webp" alt="Purple" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-transparent hover:border-white transition-all cursor-pointer">
+                                    <span class="text-sm">Purple</span>
+                                </div>
+                                <div class="text-center">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ra28-m52fa45y3r0g00@resize_w450_nl.webp" alt="Pink Sand" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-transparent hover:border-white transition-all cursor-pointer">
+                                    <span class="text-sm">Pink Sand</span>
+                                </div>
+                                <div class="text-center">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ra1f-m52fa4f3qcemd4@resize_w450_nl.webp" alt="Black" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-transparent hover:border-white transition-all cursor-pointer">
+                                    <span class="text-sm">Black</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-bold mb-4">Promo Berakhir Dalam:</h3>
+                            <div class="flex space-x-4">
+                                <div class="countdown-item">
+                                    <div class="text-2xl font-bold" id="hours">08</div>
+                                    <div class="text-xs">Jam</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="text-2xl font-bold" id="minutes">45</div>
+                                    <div class="text-xs">Menit</div>
+                                </div>
+                                <div class="countdown-item">
+                                    <div class="text-2xl font-bold" id="seconds">30</div>
+                                    <div class="text-xs">Detik</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="cta-button w-full">
+                            <i class="fas fa-shopping-cart"></i> PESAN SEKARANG
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- OrderOnline Form -->
+                <div class="bg-white p-6 rounded-xl">
+                    <h3 class="text-2xl font-bold text-center text-black mb-6">Form Pemesanan</h3>
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" data-username="mila" data-product-slug="magskin-ultra-soft-magnetic-case" data-product-id="68906aafd29bd3d68501c215" id="oo-embed-form-magskin-ultra-soft-magnetic-case-7326" data-origin="orderonline">
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pertanyaan Umum</h2>
+                <p class="text-xl max-w-3xl mx-auto">Temukan jawaban untuk pertanyaan umum tentang MagSkin™</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-6 font-bold text-lg flex justify-between items-center">
+                            <span>Apakah case ini kompatibel dengan wireless charging?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-700">Ya, MagSkin™ didesain khusus untuk kompatibel dengan semua jenis wireless charger. Magnet yang kuat memastikan posisi yang tepat untuk pengisian daya optimal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-6 font-bold text-lg flex justify-between items-center">
+                            <span>Bagaimana dengan perlindungan terhadap benturan?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-700">MagSkin™ memiliki desain bumper yang ditinggikan di sekitar layar dan kamera, serta sudut yang diperkuat untuk menyerap guncangan. Bahan silikon premium juga memberikan perlindungan guncangan yang sangat baik.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-6 font-bold text-lg flex justify-between items-center">
+                            <span>Apakah bahan silikonnya mudah kotor?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-700">Bahan liquid silicone premium kami memiliki lapisan anti noda yang membuatnya tahan terhadap kotoran dan minyak. Jika kotor, cukup bersihkan dengan kain lembab dan case akan kembali seperti baru.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-6 font-bold text-lg flex justify-between items-center">
+                            <span>Berapa lama pengiriman biasanya?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 pb-6 hidden">
+                            <p class="text-gray-700">Kami mengirimkan pesanan setiap hari kerja. Untuk wilayah Jabodetabek, pengiriman biasanya 1-2 hari kerja. Untuk luar Jawa, pengiriman memakan waktu 2-5 hari kerja tergantung lokasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/9968f80a9fe9483bb00878e608e697f9~tplv-o3syd03w52-resize-png:300:300.png?dr=15580" alt="Logo Toko" class="w-12 h-12 rounded-full mr-3">
+                        <h2 class="text-xl font-bold">MagSkin™ Official Store</h2>
+                    </div>
+                    <p class="text-gray-400 mb-4">Case premium berbahan liquid silicone dengan magnet kuat untuk gaya dan perlindungan maksimal.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Produk</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">MagSkin™ Series</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Aksesoris iPhone</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Bundle Promo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Bantuan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cara Pemesanan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pengembalian</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Garansi Produk</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i class="fas fa-map-marker-alt mr-3"></i> Jakarta, Indonesia</li>
+                        <li class="flex items-center text-gray-400"><i class="fas fa-envelope mr-3"></i> support@magskin.id</li>
+                        <li class="flex items-center text-gray-400"><i class="fab fa-whatsapp mr-3"></i> +62 812 3456 7890</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 MagSkin™ Official Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="" class="max-h-[80vh]">
+            <video id="lightbox-video" controls class="max-h-[80vh] hidden">
+                <source src="" type="video/mp4">
+            </video>
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+        </div>
+    </div>
+
+    <!-- Minimal Social Proof Popup -->
+    <div class="social-proof" id="social-proof"></div>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/de984d37fffd4acf81811d2602412d0d~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584" alt="MagSkin Case" class="w-16 h-16 rounded-lg mr-4">
+                    <div>
+                        <div class="font-bold">MagSkin™ - Ultra Soft Magnetic Case</div>
+                        <div class="flex items-center">
+                            <div class="text-lg font-bold text-primary">Rp 195.000</div>
+                            <div class="ml-2 text-sm line-through text-gray-500">Rp 289.000</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button px-8 py-3">
+                    <i class="fas fa-shopping-cart"></i> PESAN SEKARANG
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxVideo = document.getElementById('lightbox-video');
+        const lightboxClose = document.getElementById('lightbox-close');
+        
+        document.querySelectorAll('.testimonial-media').forEach(media => {
+            media.addEventListener('click', () => {
+                const src = media.getAttribute('data-src');
+                
+                lightboxImage.src = src;
+                lightboxImage.classList.remove('hidden');
+                
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            lightboxVideo.pause();
+            document.body.style.overflow = 'auto';
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                lightboxVideo.pause();
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Color selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.color-option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                option.classList.add('active');
+            });
+        });
+        
+        // Social Proof Popup
+        const socialProof = document.getElementById('social-proof');
+        const socialText = document.getElementById('social-text');
+        const socialAvatar = document.getElementById('social-avatar');
+        const socialTime = document.getElementById('social-time');
+        
+        const names = ['Vina', 'Dina', 'Kartika', 'Lestari', 'Putri', 'Maya Sari', 'Rani', 'Permata', 'Lestari F'];
+        const cities = ['Jakarta', 'Surabaya', 'Bandung', 'Medan', 'Bekasi', 'Tangerang', 'Depok', 'Semarang'];
+        const times = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
+        
+        function showSocialProof() {
+            const names = ['Vina', 'Dina', 'Kartika', 'Lestari'];
+            const name = names[Math.floor(Math.random() * names.length)];
+            
+            socialProof.textContent = `${name} baru saja memesan MagSkin™`;
+            socialProof.classList.add('active');
+            
+            setTimeout(() => {
+                socialProof.classList.remove('active');
+            }, 3000);
+        }
+        
+        // Initial delay for first popup
+        setTimeout(showSocialProof, 3000);
+        
+        // Show popup every 10-15 seconds
+        setInterval(showSocialProof, 10000 + Math.random() * 5000);
+        
+        // Sticky CTA on scroll
+        const stickyCta = document.getElementById('sticky-cta');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                stickyCta.classList.add('active');
+            } else {
+                stickyCta.classList.remove('active');
+            }
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isOpen = content.classList.contains('hidden');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item div:last-child').forEach(item => {
+                    item.classList.add('hidden');
+                });
+                
+                // Reset all icons
+                document.querySelectorAll('.faq-item i').forEach(icon => {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                });
+                
+                // Toggle current item
+                if (isOpen) {
+                    content.classList.remove('hidden');
+                    button.querySelector('i').classList.remove('fa-chevron-down');
+                    button.querySelector('i').classList.add('fa-chevron-up');
+                }
+            });
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            
+            let hours = parseInt(hoursElement.textContent);
+            let minutes = parseInt(minutesElement.textContent);
+            let seconds = parseInt(secondsElement.textContent);
+            
+            seconds--;
+            
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    
+                    if (hours < 0) {
+                        hours = 0;
+                        minutes = 0;
+                        seconds = 0;
+                    }
+                }
+            }
+            
+            hoursElement.textContent = hours.toString().padStart(2, '0');
+            minutesElement.textContent = minutes.toString().padStart(2, '0');
+            secondsElement.textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+    </script>
+    
+    <!-- OrderOnline Script -->
+    <script>
+        if (typeof xLogError != 'function') {
+            var xLogError = function (error) {
+                var req = new XMLHttpRequest();
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                req.open('POST', 'https://api.orderonline.id/log', true);
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                req.send(params);
+            };
+        }
+        try {
+            if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                        s = d.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+            }
+            if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                    if (w.ooe) return;
+                    n = w.ooe = function() {
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!w._ooe) w._ooe = n;
+                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                };
+            }
+            xEmbedInit(window);
+            ooe('setup', 'redirect', 'https://mila.orderonline.id');
+            ooe('init', '5f1a7b8fa9bf807da24d83bb', '68906aafd29bd3d68501c215', '68906aafd29bd3d68501c216', 'oo-embed-form-magskin-ultra-soft-magnetic-case-7326', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+            if (!window.jQuery) {
+                !function(w, d, e, v, id, t, s) {
+                    if (d.getElementById(id)) return;
+                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                    t.addEventListener('load', xEmbedScript);
+                    s = d.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s);
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+            } else {
+                xEmbedScript();
+            }
+        } catch (e) {
+            xLogError(e);
+            throw e;
+        }
+    </script>
+</body>
+</html>
